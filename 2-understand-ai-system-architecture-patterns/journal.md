@@ -1,5 +1,8 @@
 ---
 date: 2026-04-20
+objective: 
+    - define learning materials
+    - create progress tracking artifacts (repo, drive)
 ---
 
 ### Main tasks
