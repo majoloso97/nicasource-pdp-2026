@@ -11,15 +11,15 @@ My learning path for 2025, in the context of Nicasource AI strategy, focuses on 
 
 My overall goal is to develop a more structured approach to using AI so that it delivers consistent value while fitting within existing technical and business constraints. Rather than following a fixed set of resources, I intend to treat any materials as starting points for deeper exploration. In some cases, those entry points may not be defined upfront, since part of the process is to discover what to learn next through exploration itself, keeping the focus on continuous research driven by curiosity.
 
-There are 4 concrete goals to be tackled:
-### Understand AI System Architecture Patterns
+There are 4 concrete goals to be tackled (Goal 1 comprised completing AI Literacy learning path in NS University internal platform):
+### Goal 2: Understand AI System Architecture Patterns
 Develop a clear understanding of the main architectural approaches for AI systems (prompt-based, RAG, tool calling, agents), including their tradeoffs and appropriate use cases. Focus on selecting the simplest effective pattern based on problem constraints. Resources: DeepLearning.AI – Building Systems with the ChatGPT API OpenAI Cookbook (RAG + tool usage sections) LangChain conceptual docs (architecture overviews only)
 
-### Design Context Management Strategies
+### Goal 3: Design Context Management Strategies
 Learn how to structure, select, and optimize context provided to LLMs, including retrieval, summarization, and multi-step context flows. Emphasis is placed on tradeoffs between relevance, cost, and performance at scale. Resources: Anthropic prompting & context guides “Lost in the Middle” paper (Liu et al.) OpenAI Cookbook (context + prompt design sections)
 
-### Design AI-Ready Data Pipelines
+### Goal 4: Design AI-Ready Data Pipelines
 Understand how to prepare and structure application data for AI usage, including preprocessing, filtering, and defining what data is suitable for retrieval or inference. This includes designing lightweight pipelines and defining “AI-ready” datasets. Resources: LlamaIndex conceptual docs (data ingestion & indexing) Pinecone learning/blog content on data preparation & retrieval
 
-### Implement Evaluation and Quality Assurance Mechanisms
+### Goal 5: Implement Evaluation and Quality Assurance Mechanisms
 Develop approaches to evaluate AI system outputs using structured criteria, including correctness, grounding, and consistency. Focus on defining simple evaluation datasets and validation mechanisms to ensure reliable behavior. Resources: OpenAI evals documentation & examples DeepLearning.AI – Evaluating and Debugging Generative AI (short course) Designing Machine Learning Systems (evaluation & iteration concepts)
