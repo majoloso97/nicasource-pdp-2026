@@ -1,6 +1,6 @@
 ---
 date: 2026-04-20
-objective: 
+objectives: 
     - define learning materials
     - create progress tracking artifacts (repo, drive)
 ---
@@ -11,9 +11,25 @@ objective:
 - Polish collection of sources to use as learning guide
 
 
-### Notes
+### Journal
 There's a diverse array of AI usage strategies and architecture patterns, and there's no standardized way to use the LLMs with traditional software.
 
 At first glance, the ecosystem feels often changing, with new state-of-art tools and strategies coming out frequently. This changing environment makes finding sources that contrast the main strategies harder due to lack of concensus.
 
 However, there are some strategies that seem to be very robust and foundational, so that newer methodologies are often new perspectives over the same foundational idea. For example: agents build over the idea of simple tool calling, RAG pipelines are a more effective strategy for context building over manual context provisioning, etc. That's not to say that newer strategies are simple, on the contrary, the simplicity of the core ideas seem to quickly increase in complexity as bigger problems are tackled. Thus, the question of 'what tool is better for this problem' still has a lot of value, specially in business contexts that are new to using AI tools and processes.
+
+
+---
+date: 2026-04-22
+objectives: 
+    - build a mental map of knowns, gaps, and unknowns
+---
+
+### Main tasks
+    - read through ai-generated summaries
+    - detect topics with least knowledge/more questions to focus on later
+    - explore ai provided sources on less known topics
+
+
+### Journal
+
