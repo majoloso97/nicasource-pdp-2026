@@ -43,3 +43,32 @@ It's interesting to see that there are LOTS of specialized techniques in each la
 Finally, the topmost layer of complexity are the so called agent loops. Personally, it feels this is where the most promising use cases appear, but where there's the least standardization on, and where it gets really easy to get lost in. Topics get mixed around: Agentic RAG is an interesting one: it's a RAG technique, but it loops over using tools to increase the accuracy of the retrieved context. 
 
 I find super relevant that the higher we climb on these complexity layers, the less deterministic the systems are, the more relevant orchestration becomes (against 'correctness' of the code) and the system reliability paradigm changes towards guardrails and oversight.
+
+
+date: 2026-04-24
+objectives: 
+    - finish DLAI course: Building Systems with the ChatGPT API
+---
+
+### Main tasks
+    - Complete short course
+
+
+### Journal
+Going through this introductory course, I notice that the most basic form of 'control' over the LLM behavior is mostly guidelines, constraints, and post-execution evaluations. Interesting that regardless of the provider, it all comes down to gathering inputs, controling the flow of those inputs to the context so that the context is properly managed and then orchestration: handling usual system errors (network failure, rate limits, etc) + all the control layer of what to do when the LLM does something it's not supposed to do.
+
+Taking that complexity out (which really is most of the job) the usual loop of generation for the simplest LLM integration in a chat, considering some sort of in-loop sanitization/evaluation is:
+```
+    prepare_system_prompt
+    loop starts
+        receive input
+        sanitize input
+        send input to LLM
+        receive output
+        evaluate output
+        return output
+    repeat
+    
+```
+
+Steps of RAG or tools can be added in the loop for these types of user-driven interactions
