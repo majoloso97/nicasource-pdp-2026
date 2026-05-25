@@ -1,0 +1,23 @@
+# Django
+django==6.0.4
+djangorestframework==3.17.1
+
+# Validation
+pydantic==2.13.3
+drf-pydantic==2.9.1
+
+# Server
+uvicorn[standard]==0.20.0
+
+# Database and Cache
+psycopg2==2.9.12
+pgvector==0.4.2
+redis==7.4.0
+
+# AI
+langgraph==1.1.10
+langchain-openai==1.2.1
+
+# Websockets
+channels==4.2.0
+channels-redis==4.1.0

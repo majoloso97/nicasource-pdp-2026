@@ -1,0 +1,51 @@
+name: ns-pdp-ctx-mgmt
+
+services:
+  ns-pdp-ctx-mgmt:
+    image: ns-pdp-ctx-mgmt
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: dev
+    volumes:
+      - .:/app
+    ports:
+      - '8005:8000'
+    command: sleep infinity
+    environment:
+      - DJANGO_SETTINGS_MODULE=${DJANGO_SETTINGS_MODULE}
+      - DJANGO_SECRET_KEY=${DJANGO_SECRET_KEY}
+      - DJANGO_DEBUG=${DJANGO_DEBUG}
+      - ENVIRONMENT=${ENVIRONMENT}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_HOST=${POSTGRES_HOST}
+      - POSTGRES_PORT=${POSTGRES_PORT}
+      - REDIS_URL=${REDIS_URL}
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+
+  ns-pdp-ctx-mgmt-db:
+    image: pgvector/pgvector:pg18-trixie
+    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+    volumes:
+      - ns-pdp-ctx-mgmt-db-data:/var/lib/postgresql
+    ports:
+      - "${POSTGRES_PORT}:${POSTGRES_PORT}"
+
+  ns-pdp-ctx-mgmt-cache:
+    image: redis:7.0.12-alpine
+    restart: unless-stopped
+    command: /bin/sh -c "redis-server --loglevel WARNING"
+    ports:
+      - '${REDIS_PORT}:6379'
+    volumes:
+      - ns-pdp-ctx-mgmt-cache-data:/data
+
+volumes:
+  ns-pdp-ctx-mgmt-db-data:
+  ns-pdp-ctx-mgmt-cache-data:
