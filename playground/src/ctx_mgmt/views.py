@@ -7,15 +7,11 @@ from .workflows.context_assistant import (
     context_assistant_workflow,
     seed_fake_data,
 )
-from .workflows.joke import State, optimizer_workflow
 
 
 class HelloWorldView(APIView):
     def post(self, request):
-        ser = State.drf_serializer(data=request.data)
-        ser.is_valid(raise_exception=True)
-        state = optimizer_workflow.invoke(ser.validated_data)
-        return Response({"joke": state["joke"]}, status=HTTP_200_OK)
+        return Response({"hello": "world"}, status=HTTP_200_OK)
 
 
 class ContextAssistantChatView(APIView):
