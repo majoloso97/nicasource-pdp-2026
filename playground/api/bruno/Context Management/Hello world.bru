@@ -1,0 +1,22 @@
+meta {
+  name: Hello world
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{HOST}}/api/v1/ctx-mgmt/hello
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "topic": "classical 'someone enters a bar' joke"
+  }
+}
+
+settings {
+  encodeUrl: true
+  timeout: 0
+}

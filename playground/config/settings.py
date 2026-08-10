@@ -134,3 +134,8 @@ STATIC_URL = "static/"
 
 # AI related settings
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+# RAG settings
+EMBEDDINGS_MODEL = "text-embedding-3-small"
+SMALL_MODEL = "gpt-4o-mini"
+CHAT_MODEL = "gpt-5.4-nano"
